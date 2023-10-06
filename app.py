@@ -23,7 +23,7 @@ def upload_image():
 
     image = Image.open(image_file)
 
-    image_file = image.transpose(Image.FLIP_LEFT_RIGHT)
+    image_flip = image.transpose(Image.FLIP_LEFT_RIGHT)
 
     image_flip.save(os.path.join('static/','flip.jpg'))
     flipped_image = 'flip.jpg'
